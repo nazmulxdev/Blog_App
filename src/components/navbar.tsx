@@ -4,6 +4,7 @@ import { Logo } from "@/components/logo";
 import { NavMenu } from "@/components/nav-menu";
 import { NavigationSheet } from "@/components/navigation-sheet";
 import Link from "next/link";
+import { ModeToggle } from "./Themes/ModeToggler";
 
 const Navbar = () => {
   return (
@@ -23,8 +24,8 @@ const Navbar = () => {
           <Button>
             <Link href="/signup">Sign Up</Link>
           </Button>
-          <Button size="icon" variant="outline">
-            <SunIcon />
+          <Button asChild>
+            <ModeToggle></ModeToggle>
           </Button>
 
           {/* Mobile Menu */}
